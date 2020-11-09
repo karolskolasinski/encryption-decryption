@@ -1,9 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="EncryptDecryptTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2020-11-08T19:00:28" hostname="DESKTOP-DLL1T63" time="0.061">
+<testsuite name="EncryptDecryptTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2020-11-09T18:21:10" hostname="DESKTOP-DLL1T63" time="0.112">
   <properties/>
-  <testcase name="start" classname="EncryptDecryptTest" time="0.061"/>
+  <testcase name="start" classname="EncryptDecryptTest" time="0.112"/>
   <system-out><![CDATA[?[1;31m
 Start test 1?[0m
+> welcome to hyperskill
+> 5
+?[1;31m
+Start test 2?[0m
+> treasure
+> 10
+?[1;31m
+Start test 3?[0m
+> qdvdqvrxqwxrxwpvrxspvxiqgdiqarairpbiqqid
+> 12
+?[1;31m
+Start test 4?[0m
+> y
+> 10
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
