@@ -1,16 +1,30 @@
 [1;31m
 Start test 1[0m
-> welcome to hyperskill
+> enc
+> Welcome to hyperskill!
 > 5
 [1;31m
 Start test 2[0m
-> treasure
-> 10
+> enc
+> Hello
+> 0
 [1;31m
 Start test 3[0m
-+> qdvdqvrxqwxrxwpvrxspvxiqgdiqarairpbiqqid
-> 12
+> enc
+> 012345678
+> 1
 [1;31m
 Start test 4[0m
-> y
-> 10
+> dec
+> \jqhtrj%yt%m~ujwxpnqq&
+> 5
+[1;31m
+Start test 5[0m
+> dec
+> Hello
+> 0
+[1;31m
+Start test 6[0m
+> dec
+> 222233334444
+> 1
