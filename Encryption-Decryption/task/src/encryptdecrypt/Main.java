@@ -1,25 +1,49 @@
 package encryptdecrypt;
 
-import java.util.Scanner;
-
 public class Main {
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        String operation = scanner.nextLine();
-        char[] split = scanner.nextLine().toCharArray();
-        int key = scanner.nextInt();
+    private static String mode = "enc";
+    private static int key = 0;
+    private static String data = "";
 
-        switch (operation) {
+
+    public static void main(String[] args) {
+        extractArgs(args);
+        run();
+    }
+
+
+    private static void run() {
+        switch (mode) {
             case "enc":
-                enc(split, key);
+                enc(data.toCharArray(), key);
                 break;
             case "dec":
-                dec(split, key);
+                dec(data.toCharArray(), key);
                 break;
             default:
-                System.out.println(operation + " is not an operation!");
+                System.out.println(mode + " is not an operation!");
         }
     }
+
+
+    private static void extractArgs(String[] args) {
+        for (int i = 0; i < args.length; i++) {
+            switch (args[i]) {
+                case "-mode":
+                    mode = args[i + 1];
+                    break;
+                case "-key":
+                    key = Integer.parseInt(args[i + 1]);
+                    break;
+                case "-data":
+                    data = args[i + 1];
+                    break;
+                default:
+                    break;
+            }
+        }
+    }
+
 
     private static void dec(char[] split, int key) {
         for (char c : split) {
@@ -30,6 +54,7 @@ public class Main {
             System.out.print(c);
         }
     }
+
 
     private static void enc(char[] split, int key) {
         for (char c : split) {

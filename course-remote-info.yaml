@@ -3,7 +3,7 @@ hyperskill_project:
   ide_files: https://stepik.org/media/attachments/lesson/209884/additional_files.json
   is_template_based: false
   use_ide: true
-update_date: Tue, 10 Nov 2020 13:50:53 UTC
+update_date: Fri, 13 Nov 2020 09:56:44 UTC
 stages:
 - id: 245
   step: 5387
@@ -16,7 +16,7 @@ stages:
   is_completed: true
 - id: 248
   step: 5390
-  is_completed: false
+  is_completed: true
 - id: 249
   step: 5391
   is_completed: false
@@ -25,6 +25,18 @@ stages:
   is_completed: false
 topics:
   0:
+  - title: Arithmetic operations
+    theory_id: 3519
+  - title: Integer types and operations
+    theory_id: 3565
+  - title: Boolean and logical operations
+    theory_id: 3516
+  - title: Relational operators
+    theory_id: 3512
+  - title: Increment and decrement
+    theory_id: 5008
+  - title: Characters
+    theory_id: 3514
   - title: Introduction to operating systems
     theory_id: 9704
   - title: Command line overview
@@ -47,18 +59,6 @@ topics:
     theory_id: 3513
   - title: Scanning the input
     theory_id: 9055
-  - title: Arithmetic operations
-    theory_id: 3519
-  - title: Integer types and operations
-    theory_id: 3565
-  - title: Boolean and logical operations
-    theory_id: 3516
-  - title: Relational operators
-    theory_id: 3512
-  - title: Increment and decrement
-    theory_id: 5008
-  - title: Characters
-    theory_id: 3514
   - title: Conditional statement
     theory_id: 3503
   - title: Ternary operator
