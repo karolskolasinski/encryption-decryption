@@ -183,6 +183,10 @@ files:
 
     }
   learner_created: false
+- name: output.txt
+  visible: true
+  text: 111122223333
+  learner_created: true
 feedback_link: https://hyperskill.org/projects/46/stages/250/implement#comment
 status: Unchecked
 record: -1
