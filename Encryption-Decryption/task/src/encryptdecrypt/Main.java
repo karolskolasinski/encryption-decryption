@@ -11,6 +11,7 @@ public class Main {
     private static int key = 0;
     private static String data = "";
     private static String filePath;
+    private static String alg = "shift";
 
 
     public static void main(String[] args) {
@@ -35,6 +36,8 @@ public class Main {
                 case "-out":
                     filePath = args[i + 1];
                     break;
+                case "-alg":
+                    alg = args[i + 1];
                 default:
                     break;
             }
@@ -76,15 +79,44 @@ public class Main {
 
     private static String transform() {
         StringBuilder builder = new StringBuilder();
+        if (alg.equals("unicode")) {
+            switch (mode) {
+                case "enc":
+                    for (char c : data.toCharArray()) {
+                        builder.append(c + key > 127 ? (char) (c + key - 128) : (char) (c + key));
+                    }
+                    return builder.toString();
+                case "dec":
+                    for (char c : data.toCharArray()) {
+                        builder.append(c - key > 127 ? (char) (c - key + 128) : (char) (c - key));
+                    }
+                    return builder.toString();
+                default:
+                    return mode + " is not an operation!";
+            }
+        }
+
         switch (mode) {
             case "enc":
                 for (char c : data.toCharArray()) {
-                    builder.append(c + key > 127 ? (char) (c + key - 128) : (char) (c + key));
+                    if (c >= 65 && c <= 90) {
+                        builder.append(c + key > 90 ? (char) (c + key - 26) : (char) (c + key));
+                    } else if (c >= 97 && c <= 122) {
+                        builder.append(c + key > 122 ? (char) (c + key - 26) : (char) (c + key));
+                    } else {
+                        builder.append(c);
+                    }
                 }
                 return builder.toString();
             case "dec":
                 for (char c : data.toCharArray()) {
-                    builder.append(c - key > 127 ? (char) (c - key + 128) : (char) (c - key));
+                    if (c >= 65 && c <= 90) {
+                        builder.append(c - key < 65 ? (char) (c - key + 26) : (char) (c - key));
+                    } else if (c >= 97 && c <= 122) {
+                        builder.append(c - key < 97 ? (char) (c - key + 26) : (char) (c - key));
+                    } else {
+                        builder.append(c);
+                    }
                 }
                 return builder.toString();
             default:
