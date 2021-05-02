@@ -1,0 +1,2 @@
+language = "java10"
+run = "java -jar out/artifacts/bulls_and_cows_jar/bulls_and_cows.jar"
